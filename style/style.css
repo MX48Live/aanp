@@ -28,8 +28,11 @@ header nav ul li.button a {
   padding: 0 20px;
   border-radius: 50px;
   color: #FFFFFF;
+  transition: 0.5s;
 }
+header nav ul li.button a:hover {
 
+}
 header nav ul li ul {
   overflow: hidden;
   transition: 0.3s;
@@ -298,7 +301,6 @@ footer .link-underline a {
     margin-bottom: 37px;
   }
 }
-
 footer .link-underline a::after {
   content: "";
   height: 3px;
@@ -310,8 +312,85 @@ footer .link-underline a::after {
   right: 0;
   transition: 0.5s;
 }
-
-
 footer .link-underline a:hover::after {
   max-width: 200px;
+}
+
+section.career {
+  padding: 46px 0;
+  text-align: center;
+  background-color: #153052;
+}
+section.career h1,
+section.career p,
+section.career a {
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+section.career h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  text-align: center;
+  color: #59c5c5;
+  position: relative;
+  padding-bottom: 25px;
+}
+section.career h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #FFFFFF;
+  transform: translateX(-50%);
+}
+section.career a {
+  width: 165px;
+  height: 40px;
+  margin: 30px 65px 0 66px;
+  padding: 12px 53px;
+  border-radius: 20px;
+  background-color: #8495ac;
+  transition: 0.5s;
+}
+section.career a:hover {
+  background-color: #0376bd;
+}
+
+@media screen and (min-width: 768px) {
+  section.career {
+    padding: 80px 0;
+  } 
+  section.career h1 {
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: center;
+    color: #59c5c5;
+    
+  }
+  section.career h1,
+  section.career a {
+    margin-bottom: 50px;
+  }
+  section.career p {
+    margin-bottom: 10px;
+  }
+  section.career p ~ p {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    white-space: nowrap;
+  }
 }
