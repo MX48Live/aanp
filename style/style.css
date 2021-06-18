@@ -320,19 +320,43 @@ section.the-future {
   background-size: cover;
 }
 
+section.insight {
+  background-color: #153052;
+}
+section.insight #slick-insight {
+  grid-template-columns: 30px auto 30px;
+  text-align: center;
+}
+section.insight .item {
+  background-color: #FFFFFF;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 992px) {
+  section.insight #slick-insight {
+    display: grid;
+    gap: 20px;
+  }
+}
+
 
 section.clients {
   background-color: #153052;
 }
 
 section.clients #slick-clients {
-  display: grid;
   grid-template-columns: 30px auto 30px;
   text-align: center;
   padding: 30px 25px 25px;
   border-radius: 20px;
   box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
   background-color: #ffffff;
+}
+@media screen and (min-width: 992px) {
+  section.clients #slick-clients {
+    display: grid;
+    gap: 20px;
+  }
 }
 section.clients .slide-container {
   padding-top: 60px;
@@ -347,8 +371,6 @@ section.clients button {
   height: 30px;
   width: 30px;
 }
-
-
 
 section.the-future h1 {
   font-family: 'Shippori Mincho', serif;
