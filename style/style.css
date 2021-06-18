@@ -233,19 +233,16 @@ footer .logo {
   }  
 }
 footer .address {
-  background-image: url('/images/f-icon/location.svg');
   background-position: 0 0px;
 }
 footer .tel {
-  background-image: url('/images/f-icon/phone.svg');
+  background-image: url('');
   background-position: 0 5px;
 }
 footer .email {
-  background-image: url('/images/f-icon/email.svg');
   background-position: 0 6px;
 }
 footer .web {
-  background-image: url('/images/f-icon/web.svg');
 }
 
 footer .social-group {
@@ -315,6 +312,68 @@ footer .link-underline a::after {
 footer .link-underline a:hover::after {
   max-width: 200px;
 }
+
+section.the-future {
+  padding: 153px 0;
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+}
+section.the-future h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 19px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  text-align: center;
+  color: #153052;
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+section.the-future h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #59c5c5;
+  transform: translateX(-50%);
+}
+section.the-future a {
+  line-height: 40px;
+  height: 40px;
+  padding: 0 53px;
+  border-radius: 20px;
+  background-color: #8495ac;
+  transition: 0.5s;
+  font-size: 14px;
+  letter-spacing: 0.88px;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 15px;
+}
+section.the-future a.button {
+  background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%);
+}
+
+@media screen and (min-width: 992px) {
+  section.the-future {
+    padding: 177px 0;
+  }
+  section.the-future br {
+    display: none;
+  }
+  section.the-future h1 {
+    margin-bottom: 49px;
+    font-size: 42px;
+  }
+}
+
 
 section.career {
   padding: 46px 0;
