@@ -116,7 +116,7 @@ header nav ul li.showSubMenu .material-icons {
   }
   nav {
     margin-top: 20px;
-    max-width: 1000px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -185,4 +185,133 @@ header nav ul li.showSubMenu .material-icons {
   header nav ul li ul li:last-child a {
     padding-bottom: 10px;
   }
+}
+
+footer {
+  font-weight: 300;
+  padding: 36px 0;
+  background-color: #FFFFFF;
+}
+footer .text-right {
+  text-align: right;
+}
+footer .address {
+  max-width: 300px;
+}
+footer .address strong {
+  color: #000000;
+  display: block;
+}
+footer .address,
+footer .tel,
+footer .email,
+footer .web {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #58595b;
+  padding-left: 30px;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+footer .logo img {
+  max-width: 100%;
+}
+footer .logo {
+  margin-bottom: 15px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 50px 0;
+  }
+  footer .logo {
+    margin-bottom: 30px;
+  }  
+}
+footer .address {
+  background-image: url('/images/f-icon/location.svg');
+  background-position: 0 0px;
+}
+footer .tel {
+  background-image: url('/images/f-icon/phone.svg');
+  background-position: 0 5px;
+}
+footer .email {
+  background-image: url('/images/f-icon/email.svg');
+  background-position: 0 6px;
+}
+footer .web {
+  background-image: url('/images/f-icon/web.svg');
+}
+
+footer .social-group {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+footer .social-group .icon {
+  background: #58585b;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 8px;
+  transition: background 0.3s;
+}
+footer .social-group .icon.facebook:hover {
+  background: #3F5CA1;
+}
+footer .social-group .icon.youtube:hover {
+  background: #E33122;
+}
+footer .social-group .icon.twitter:hover {
+  background: #62B3E8;
+}
+footer .social-group .icon.instgram:hover {
+  background: #C54C7E;
+}
+footer .social-group .icon.messenger:hover {
+  background: #3D8EF7;
+}
+
+
+footer .social-group .icon img {
+  display: block;
+}
+footer .link-underline {
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  margin-bottom: 26px;
+}
+footer .link-underline a {
+  color: #58595b;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  footer .social-group {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  footer .link-underline {
+    margin-bottom: 37px;
+  }
+}
+
+footer .link-underline a::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  max-width: 66px;
+  background-color: #59c5c5;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: 0.5s;
+}
+
+
+footer .link-underline a:hover::after {
+  max-width: 200px;
 }
