@@ -319,6 +319,37 @@ section.the-future {
   background-position: center center;
   background-size: cover;
 }
+
+
+section.clients {
+  background-color: #153052;
+}
+
+section.clients #slick-clients {
+  display: grid;
+  grid-template-columns: 30px auto 30px;
+  text-align: center;
+  padding: 30px 25px 25px;
+  border-radius: 20px;
+  box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
+  background-color: #ffffff;
+}
+section.clients .slide-container {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+section.clients .item {
+  height: 300px;
+}
+
+section.clients button {
+  height: 30px;
+  width: 30px;
+}
+
+
+
 section.the-future h1 {
   font-family: 'Shippori Mincho', serif;
   font-size: 19px;

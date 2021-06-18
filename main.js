@@ -9,5 +9,5 @@ $(document).ready(function () {
     $('header ul > li').removeClass('showSubMenu')
   })
 
-
+  $('#slick-clients').slick();
 })
