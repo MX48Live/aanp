@@ -329,6 +329,7 @@ button.slick-arrow span {
 ul.slick-dots {
   width: 100%;
   display: block;
+  text-align: center;
 }
 ul.slick-dots li {
   display: inline-block;
@@ -361,6 +362,145 @@ section.the-future {
   background-size: cover;
 }
 
+
+/* section.hero */
+section.hero {
+}
+section.hero .item {
+  background-color: #eee;
+  padding: 50px 0;
+}
+section.hero {
+  position: relative;
+}
+section.hero button.slick-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+section.hero button.slick-prev {
+  left: 25px;
+}
+section.hero button.slick-next {
+  right: 25px;
+}
+@media screen and (min-width: 1199px) {
+  section.hero button.slick-prev {
+    left: 50px;
+  }
+  section.hero button.slick-next {
+    right: 50px;
+  } 
+}
+
+
+/* section.what-we-offer */
+section.what-we-offer {
+  position: relative;
+}
+section.what-we-offer button.slick-arrow {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+section.what-we-offer button.slick-prev {
+  left: 25px;
+}
+section.what-we-offer button.slick-next {
+  right: 25px;
+}
+section.what-we-offer h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #153052;
+  position: relative;
+  padding-bottom: 10px;
+}
+section.what-we-offer h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #59c5c5;
+}
+@media screen and (min-width: 992px) {
+  section.what-we-offer h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-bottom: 25px;
+  }
+}
+
+
+
+
+/* section we app */
+section.we-aap {
+  background-color: #153052;
+}
+section.we-aap h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #59c5c5;
+  position: relative;
+  padding-bottom: 10px;
+}
+section.we-aap h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 992px) {
+  section.we-aap h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-bottom: 25px;
+  }
+}
+section.we-aap .slide-container {
+  border-radius: 20px;
+  box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
+  background-color: #e6eaf6;
+  padding: 15px;
+}
+section.we-aap #slick-we-aap button.slick-arrow {
+  box-shadow: none;
+}
+section.we-aap #slick-we-aap .slick-app {
+  grid-template-columns: 50px auto 50px;
+}
+@media screen and (min-width: 992px) {
+  section.we-aap #slick-we-aap .slick-app  {
+    display: grid;
+    gap: 20px;
+  }
+  section.we-aap .slide-container {
+    padding: 33px 20px;
+  }
+}
+
+
+
+
+
+
+/* blue-bg-group */
 .blue-bg-group {
   background-color: #153052;
   padding-top: 35px;
@@ -403,7 +543,6 @@ section.insight h1 {
   color: #59c5c5;
   position: relative;
   padding-bottom: 10px;
-  
 }
 section.insight h1:after {
   content: "";
@@ -421,13 +560,8 @@ section.insight .slide-container {
 @media screen and (min-width: 992px) {
   section.insight h1 {
     font-size: 40px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
     letter-spacing: 3px;
     text-align: left;
-    color: #59c5c5;
     padding-bottom: 25px;
   }
   section.insight .slide-container {
@@ -466,13 +600,8 @@ section.clients .slide-container {
 @media screen and (min-width: 992px) {
   section.clients h1 {
     font-size: 40px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
     letter-spacing: 3px;
     text-align: left;
-    color: #59c5c5;
     padding-bottom: 25px;
     
   }
@@ -607,14 +736,7 @@ section.career a:hover {
   } 
   section.career h1 {
     font-size: 40px;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
     letter-spacing: 3px;
-    text-align: center;
-    color: #59c5c5;
-    
   }
   section.career h1,
   section.career a {
