@@ -10,16 +10,19 @@ $(document).ready(function () {
   })
 
   $('#slick-insight').slick({
-    dots: true,
+    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
+    prevArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_left</span></button>',
     slidesToShow: 3,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
+    dots: false,
     responsive: [
       {
         breakpoint: 1213,
         settings: {
           slidesToShow: 2,
-          centerMode: true,
+          centerMode: false,
           centerPadding: '10%',
+          dots: false,
         }
       },
       {
@@ -29,6 +32,7 @@ $(document).ready(function () {
           slidesToShow: 2,
           centerMode: true,
           centerPadding: '10%',
+          dots: true,
         }
       },
       {
@@ -38,11 +42,16 @@ $(document).ready(function () {
           slidesToShow: 1,
           centerMode: true,
           centerPadding: '10%',
+          dots: true,
         }
       },
     ]
   });
-  $('#slick-clients').slick({
+
+  $('#slick-clients .slick-app').slick({
+    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
+    prevArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_left</span></button>',
+    appendDots: $('#slick-clients'),
     dots: true,
     responsive: [
       {

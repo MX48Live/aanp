@@ -190,6 +190,7 @@ header nav ul li.showSubMenu .material-icons {
   }
 }
 
+/* Footer */
 footer {
   font-weight: 300;
   padding: 36px 0;
@@ -223,7 +224,6 @@ footer .logo {
   margin-bottom: 15px;
   
 }
-
 @media screen and (min-width: 768px) {
   footer {
     padding: 50px 0;
@@ -242,9 +242,6 @@ footer .tel {
 footer .email {
   background-position: 0 6px;
 }
-footer .web {
-}
-
 footer .social-group {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -271,8 +268,6 @@ footer .social-group .icon.instgram:hover {
 footer .social-group .icon.messenger:hover {
   background: #3D8EF7;
 }
-
-
 footer .social-group .icon img {
   display: block;
 }
@@ -313,6 +308,52 @@ footer .link-underline a:hover::after {
   max-width: 200px;
 }
 
+/* Slick Global */
+button.slick-arrow:active {
+  color: #000000;
+}
+button.slick-arrow {
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  display: block;
+  width: 49px !important;
+  height: 49px  !important;
+  box-shadow: 0 2px 4px 0 #8495ac;
+  background-color: #ffffff;
+}
+button.slick-arrow span {
+  line-height: 45px;
+  text-align: center;
+}
+ul.slick-dots {
+  width: 100%;
+  display: block;
+}
+ul.slick-dots li {
+  display: inline-block;
+}
+ul.slick-dots li {
+  margin: 5px;
+}
+ul.slick-dots li.slick-active button {
+  width: 20px;
+  background-color: #8495ac;
+  box-shadow: 1px 2px 4px 0 rgba(21, 48, 82, 0.65);
+}
+ul.slick-dots li button {
+  color: transparent;
+  border: none;
+  height: 12px;
+  width: 12px;
+  font-size: 0;
+  border-radius: 10px;
+  outline: none;
+  display: block;
+  background-color: #bfccd8;
+  transition: 0.5s;
+}
+
 section.the-future {
   padding: 153px 0;
   text-align: center;
@@ -320,17 +361,31 @@ section.the-future {
   background-size: cover;
 }
 
-section.insight {
+.blue-bg-group {
   background-color: #153052;
+  padding-top: 35px;
 }
+@media screen and (min-width: 992px) {
+  .blue-bg-group {
+    padding-top: 80px;
+  } 
+}
+
+/* Insight */
+section.insight {}
 section.insight #slick-insight {
-  grid-template-columns: 30px auto 30px;
+  grid-template-columns: 50px auto 50px;
   text-align: center;
+}
+section.insight #slick-insight .slick-dots {
+  margin-top: 25px;
 }
 section.insight .item {
   background-color: #FFFFFF;
   margin-left: 10px;
   margin-right: 10px;
+  border-radius: 10px;
+  height: 100px;
 }
 @media screen and (min-width: 992px) {
   section.insight #slick-insight {
@@ -338,40 +393,112 @@ section.insight .item {
     gap: 20px;
   }
 }
-
-
-section.clients {
-  background-color: #153052;
+section.insight h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #59c5c5;
+  position: relative;
+  padding-bottom: 10px;
+  
+}
+section.insight h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
+section.insight .slide-container {
+  padding-top: 22px;
+  padding-bottom: 35px;
+}
+@media screen and (min-width: 992px) {
+  section.insight h1 {
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #59c5c5;
+    padding-bottom: 25px;
+  }
+  section.insight .slide-container {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
 }
 
+
+/* Clients */
+section.clients {}
+section.clients h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #59c5c5;
+  position: relative;
+  padding-bottom: 10px;
+}
+section.clients h1:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #FFFFFF;
+}
+section.clients .slide-container {
+  padding-top: 22px;
+  padding-bottom: 35px;
+}
+@media screen and (min-width: 992px) {
+  section.clients h1 {
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #59c5c5;
+    padding-bottom: 25px;
+    
+  }
+  section.clients .slide-container {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
 section.clients #slick-clients {
-  grid-template-columns: 30px auto 30px;
   text-align: center;
   padding: 30px 25px 25px;
   border-radius: 20px;
   box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
   background-color: #ffffff;
 }
+section.clients #slick-clients .slick-app {
+  grid-template-columns: 50px auto 50px;
+}
 @media screen and (min-width: 992px) {
-  section.clients #slick-clients {
+  section.clients #slick-clients .slick-app  {
     display: grid;
     gap: 20px;
   }
 }
-section.clients .slide-container {
-  padding-top: 60px;
-  padding-bottom: 80px;
-}
 
-section.clients .item {
-  height: 300px;
-}
-
-section.clients button {
-  height: 30px;
-  width: 30px;
-}
-
+/* Future */
 section.the-future h1 {
   font-family: 'Shippori Mincho', serif;
   font-size: 19px;
@@ -427,7 +554,7 @@ section.the-future a.button {
   }
 }
 
-
+/* Career */
 section.career {
   padding: 46px 0;
   text-align: center;
