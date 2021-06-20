@@ -15,7 +15,7 @@ $(document).ready(function () {
 
   $('#slick-clients .slick-app .item .video').on('click', function () {
     var youtubeID = $(this, '.video').data('youtube-id');
-    $(this).html('<iframe src="http://www.youtube.com/embed/'+youtubeID+'?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+    $(this).html('<iframe src="https://www.youtube.com/embed/'+youtubeID+'?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
   })
 
   $('#slick-hero .slick-app').slick({
