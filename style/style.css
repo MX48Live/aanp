@@ -339,6 +339,10 @@ button.slick-arrow {
   height: 49px  !important;
   box-shadow: 0 2px 4px 0 #8495ac;
   background-color: #ffffff;
+  padding: 0;
+}
+button.slick-arrow {
+  width: 100%;
 }
 button.slick-arrow span {
   line-height: 45px;
@@ -452,7 +456,7 @@ section.hero button.slick-arrow {
   position: absolute;
   z-index: 999;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   section.hero button.slick-prev {
     left: 50px;
   }
@@ -460,6 +464,7 @@ section.hero button.slick-arrow {
     right: 50px;
   } 
 }
+
 section.hero .button-group {
   display: block;
   text-align: center;
@@ -574,16 +579,20 @@ section.what-we-offer .item .expand-group.gray {
   background-color: #8495ac;
 }
 section.what-we-offer .item .expand-group .title {
-  height: 50px;
+  height: 60px;
   display: grid;
-  align-items: center;
   text-align: center;
+  align-items: center;
   color: #FFFFFF;
   line-height: 1.2em;
   overflow: hidden;
-  grid-template-columns: auto 30px;
-  padding-top: 4px;
 }
+@media screen and (min-width: 768px) {
+  section.what-we-offer .item .expand-group .title {
+    pointer-events: none;
+  }  
+}
+
 section.what-we-offer .item .expand-group .title span {
     transform: rotate(0deg);
     transition: 0.5s;
@@ -602,6 +611,7 @@ section.what-we-offer .item .expand-group .desc {
   -webkit-line-clamp: 9; 
   -webkit-box-orient: vertical;
   margin-bottom: 20px;
+  margin-top: 10px;
 
 }
 section.what-we-offer .item .expand-group .readmore span {
@@ -626,10 +636,10 @@ section.what-we-offer .item {
 }
 @media screen and (max-width: 767px) {
   section.what-we-offer .item {
-    max-height: 50px;
+    max-height: 60px;
     transition: 0.5s;
   }
-  section.what-we-offer .item.expanded {
+  /* section.what-we-offer .item.expanded {
     max-height: 325px;
   }
   section.what-we-offer .item .expand-group .title span {
@@ -637,11 +647,11 @@ section.what-we-offer .item {
   }
   section.what-we-offer .item.expanded .expand-group .title span {
     transform: rotate(180deg);
-  }
+  } */
 }
 @media screen and (min-width: 768px) {
   section.what-we-offer .item .expand-group {
-    transform: translatey(270px);
+    transform: translatey(285px);
     transition: 0.5s;
   }
   section.what-we-offer .item .expand-group .title span {
@@ -673,9 +683,6 @@ section.we-aap {
 }
 @media screen and (min-width: 992px) {
   section.we-aap {
-    background-color: #153052;
-    background-size: cover;
-    background-position: bottom right;
     padding: 80px 0;
   }
 }
@@ -844,6 +851,9 @@ section.we-aap .slick-app .item .bottom-section .name-position strong {
 .blue-bg-group {
   background-color: #153052;
   padding-top: 35px;
+  background-position: bottom right;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 992px) {
   .blue-bg-group {

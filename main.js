@@ -18,9 +18,12 @@ $(document).ready(function () {
     $(this).html('<iframe src="https://www.youtube.com/embed/'+youtubeID+'?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
   })
 
+  var nextArrow = '<button type="button" class="slick-next"><img src="/images/arrow-right.svg" /></button>';
+  var prevArrow = '<button type="button" class="slick-prev"><img src="/images/arrow-left.svg" /></button>';
+
   $('#slick-hero .slick-app').slick({
-    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
-    prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
     appendDots: $('#slick-hero'),
     dots: true,
     responsive: [
@@ -34,8 +37,8 @@ $(document).ready(function () {
   });
 
   $('#slick-insight').slick({
-    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
-    prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
     appendDots: $('#slick-insight'),
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -79,8 +82,8 @@ $(document).ready(function () {
   });
 
   $('#slick-clients .slick-app').slick({
-    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
-    prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
     appendDots: $('#slick-clients'),
     dots: true,
     responsive: [
@@ -94,8 +97,8 @@ $(document).ready(function () {
   });
 
   $('#slick-we-aap .slick-app').slick({
-    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
-    prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
     appendDots: $('#slick-we-aap'),
     dots: true,
     responsive: [
@@ -109,8 +112,8 @@ $(document).ready(function () {
   });
 
   $('#slick-what-we-offer .slick-app').slick({
-    nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
-    prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
     appendDots: $('#slick-what-we-offer'),
     dots: false,
     arrows: true,
