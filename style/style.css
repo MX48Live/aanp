@@ -415,18 +415,19 @@ section.hero button.slick-next {
 /* section.what-we-offer */
 section.what-we-offer {
   position: relative;
+  padding-top: 35px;
 }
-section.what-we-offer button.slick-arrow {
-  position: absolute;
-  top: 0;
-  z-index: 999;
+@media screen and (min-width: 992px) {
+  section.what-we-offer {
+    padding-top: 60px;
+  } 
 }
-section.what-we-offer button.slick-prev {
-  left: 25px;
+@media screen and (min-width: 1200px) {
+  section.what-we-offer {
+    padding-top: 80px;
+  } 
 }
-section.what-we-offer button.slick-next {
-  right: 25px;
-}
+
 section.what-we-offer h1 {
   font-size: 22px;
   font-weight: 300;
@@ -437,6 +438,7 @@ section.what-we-offer h1 {
   color: #153052;
   position: relative;
   padding-bottom: 10px;
+  margin-bottom: 25px;
 }
 section.what-we-offer h1:after {
   content: "";
@@ -455,9 +457,133 @@ section.what-we-offer h1:after {
     padding-bottom: 25px;
   }
 }
+section.what-we-offer .description {
+  font-size: 16px;
+  line-height: 1.88;
+  color: #58595b;
+  margin-bottom: 25px;
+}
+section.what-we-offer .slide-container {
+  padding: 0px 0 40px 0;
+}
+@media screen and (min-width: 768px) {
+  section.what-we-offer .slide-container {
+    padding: 20px 0 60px 0;
+  } 
+}
+@media screen and (min-width: 1200px) {
+  section.what-we-offer .slide-container {
+    padding: 40px 0 80px 0;
+  } 
+}
+@media screen and (min-width: 768px) {
+  section.what-we-offer .container.slick {
+    max-width: 1900px !important;
+  }
+}
+section.what-we-offer .item {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center center;
+}
+section.what-we-offer .item .expand-group.blue {
+  background-color: #153052;
+}
+section.what-we-offer .item .expand-group.gray {
+  background-color: #8495ac;
+}
+section.what-we-offer .item .expand-group .title {
+  height: 50px;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 1.2em;
+  overflow: hidden;
+  grid-template-columns: auto 30px;
+  padding-top: 4px;
+}
+section.what-we-offer .item .expand-group .title span {
+    transform: rotate(0deg);
+    transition: 0.5s;
+  }
+section.what-we-offer .item .expand-group .desc {
+  font-size: 14px;
+  line-height: 1.64;
+  text-align: center;
+  color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9; 
+  -webkit-box-orient: vertical;
+  margin-bottom: 20px;
 
+}
+section.what-we-offer .item .expand-group .readmore span {
+  vertical-align: middle;
+  font-size: 20px;
+  margin-top: -4px;
+}
+section.what-we-offer .item .expand-group .readmore a {
+  color: #FFFFFF;
+  display: block;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background-color: rgba(0,0,0,0.2);
+}
+section.what-we-offer .item .expand-group .readmore {
+  text-align: center;
+}
+section.what-we-offer .item {
+  overflow: hidden;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  section.what-we-offer .item {
+    max-height: 50px;
+    transition: 0.5s;
+  }
+  section.what-we-offer .item.expanded {
+    max-height: 325px;
+  }
+  section.what-we-offer .item .expand-group .title span {
+    transition: 0.5s;
+  }
+  section.what-we-offer .item.expanded .expand-group .title span {
+    transform: rotate(180deg);
+  }
+}
+@media screen and (min-width: 768px) {
+  section.what-we-offer .item .expand-group {
+    transform: translatey(270px);
+    transition: 0.5s;
+  }
+  section.what-we-offer .item .expand-group .title span {
+    transform: rotate(180deg);
+  }
+  
+  section.what-we-offer .item.expanded .expand-group .title span {
+    transform: rotate(0deg);
+  }
+  section.what-we-offer .item:hover .expand-group .title span {
+    transform: rotate(0deg);
+  }
 
+   section.what-we-offer .item.expanded .expand-group {
+    transform: translatey(0px);
+  }
+  section.what-we-offer .item:hover .expand-group {
+    transform: translatey(0px);
+  }
 
+}
 
 /* section we app */
 section.we-aap {
@@ -559,6 +685,7 @@ section.we-aap .slick-app .item .top-section {
 }
 section.we-aap .slick-app .item .top-section .quote img {
   max-width: 100%;
+  border-radius: 50%;
 }
 section.we-aap .slick-app .item .top-section .text {
   text-align: center;
@@ -570,7 +697,21 @@ section.we-aap .slick-app .item .top-section .text {
   color: #58595b;
   font-family: 'Shippori Mincho', serif;
   max-width: 460px;
+  position: relative;
+  padding-bottom: 30px;
 }
+
+section.we-aap .slick-app .item .top-section .text:after {
+  content: "";
+  height: 2px;
+  width: 152px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #59c5c5;
+}
+
 @media screen and (min-width: 992px) {
   section.we-aap .slick-app .item .top-section .text {
     font-size: 20px;
