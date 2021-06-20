@@ -9,10 +9,15 @@ $(document).ready(function () {
     $('header ul > li').removeClass('showSubMenu')
   })
 
+  $('#slick-clients .slick-app .item .video').on('click', function () {
+    var youtubeID = $(this, '.video').data('youtube-id');
+    $(this).html('<iframe src="http://www.youtube.com/embed/'+youtubeID+'?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
+  })
+
   $('#slick-hero .slick-app').slick({
     nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
     prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
-    appendDots: $('#slick-clients'),
+    appendDots: $('#slick-hero'),
     dots: true,
     responsive: [
       {
@@ -27,8 +32,11 @@ $(document).ready(function () {
   $('#slick-insight').slick({
     nextArrow: '<button type="button" class="slick-next"><span class="material-icons">chevron_right</span></button>',
     prevArrow: '<button type="button" class="slick-prev"><span class="material-icons">chevron_left</span></button>',
+    appendDots: $('#slick-insight'),
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    centerMode: false,
     dots: false,
     responsive: [
       {
