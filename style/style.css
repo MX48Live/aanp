@@ -384,25 +384,75 @@ section.the-future {
 /* section.hero */
 section.hero {
 }
-section.hero .item {
-  background-color: #eee;
-  padding: 50px 0;
+section.hero, 
+section.item {
+  background-size: cover;
+  background-position: center top;
 }
+section.hero .slick-dots {
+  margin-top: -40px;
+}
+section.hero .slick-arrow ~ .slick-list {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+section.hero .item {
+  padding: 50px 0 80px 0;
+}
+section.hero .item h1 {
+  text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5);
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 3.5px;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Shippori Mincho', serif;
+  margin-top: 10px;
+  white-space: normal;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  section.hero .item h1 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.hero .item h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section.hero .item h1 {
+    font-size: 38px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  section.hero .item h1 {
+    font-size: 42px;
+  }
+}
+section.hero .desc {
+  max-width: 630px;
+  line-height: 1.64;
+  text-align: center;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  margin-top: 35px;
+  margin-bottom: 55px;
+}
+
 section.hero {
   position: relative;
 }
 section.hero button.slick-arrow {
   position: absolute;
-  top: 0;
   z-index: 999;
 }
-section.hero button.slick-prev {
-  left: 25px;
-}
-section.hero button.slick-next {
-  right: 25px;
-}
-@media screen and (min-width: 1199px) {
+@media screen and (min-width: 1200px) {
   section.hero button.slick-prev {
     left: 50px;
   }
@@ -410,6 +460,35 @@ section.hero button.slick-next {
     right: 50px;
   } 
 }
+section.hero .button-group {
+  display: block;
+  text-align: center;
+}
+section.hero a.button {
+  /* background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%); */
+  background: #8495ac;
+  line-height: 40px;
+  white-space: nowrap;
+  display: inline-block;
+  padding: 0 20px;
+  border-radius: 50px;
+  color: #FFFFFF;
+  transition: 0.5s;
+  text-transform: uppercase;
+  margin: 5px;
+}
+section.hero a.button:hover {
+  background-color: #0376bd;
+}
+section.hero a.button.blue {
+  border: solid 1px #ffffff;
+  background-color: #153052;
+}
+@media screen and (min-width: 992px) {
+  section.hero a.button {
+    margin: 10px;
+  } 
+} 
 
 
 /* section.what-we-offer */
@@ -962,6 +1041,9 @@ section.insight .insight-form button {
   margin-right: auto;
   margin-left: auto;
 }
+section.insight .insight-form button:hover {
+  background-color: #0376bd;
+}
 section.insight .insight-form form {
   display: block;
 }
@@ -1232,6 +1314,9 @@ section.the-future a {
   text-transform: uppercase;
   display: inline-block;
   margin: 15px;
+}
+section.the-future a:hover {
+  background-color: #0376bd;
 }
 section.the-future a.button {
   background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%);
