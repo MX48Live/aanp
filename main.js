@@ -44,7 +44,6 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     infinite: true,
-    centerMode: false,
     dots: false,
     responsive: [
       {
@@ -52,7 +51,6 @@ $(document).ready(function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          centerMode: false,
           centerPadding: '10%',
           dots: false,
         }
@@ -62,10 +60,9 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           slidesToShow: 2,
-          slidesToScroll: 2,
-          centerMode: true,
-          centerPadding: '10%',
+          slidesToScroll: 1,
           dots: true,
+          variableWidth: true,
         }
       },
       {
@@ -74,9 +71,8 @@ $(document).ready(function () {
           arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: true,
-          centerPadding: '10%',
           dots: true,
+          variableWidth: true,
         }
       },
     ]

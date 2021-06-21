@@ -530,13 +530,16 @@ section.what-we-offer h1 {
 section.what-we-offer h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #59c5c5;
 }
 @media screen and (min-width: 992px) {
+  section.what-we-offer h1:after {
+    width: 152px;
+  }
   section.what-we-offer h1 {
     font-size: 40px;
     letter-spacing: 3px;
@@ -717,13 +720,16 @@ section.we-aap h1 {
 section.we-aap h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #FFFFFF;
 }
 @media screen and (min-width: 992px) {
+  section.we-aap h1:after {
+    width: 152px;
+  }
   section.we-aap h1 {
     font-size: 40px;
     letter-spacing: 3px;
@@ -871,6 +877,7 @@ section.we-aap .slick-app .item .bottom-section .name-position strong {
   background-position: bottom right;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 @media screen and (min-width: 992px) {
   .blue-bg-group {
@@ -914,11 +921,16 @@ section.insight h1 {
 section.insight h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: #FFFFFF;
+}
+@media screen and (min-width: 992px) {
+  section.insight h1:after {
+    width: 152px;
+  }
 }
 section.insight .slide-container {
   padding-top: 22px;
@@ -1042,6 +1054,17 @@ section.insight .item a {
 section.insight .slick-arrow {
   top: 20%;
 }
+@media screen and (max-width: 991px) {
+  section.insight .item {
+    max-width: 40vw;
+  }  
+}
+
+@media screen and (max-width: 767px) {
+  section.insight .item {
+    max-width: 80vw;
+  }  
+}
 
 
 
@@ -1109,7 +1132,7 @@ section.clients h1 {
 section.clients h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1120,6 +1143,9 @@ section.clients .slide-container {
   padding-bottom: 35px;
 }
 @media screen and (min-width: 992px) {
+  section.clients h1:after {
+    width: 152px;
+  }
   section.clients h1 {
     font-size: 40px;
     letter-spacing: 3px;
@@ -1321,12 +1347,17 @@ section.the-future h1 {
 section.the-future h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 50%;
   background-color: #59c5c5;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 992px) {
+  section.the-future h1:after {
+    width: 152px;
+  }
 }
 section.the-future a {
   line-height: 40px;
@@ -1389,12 +1420,17 @@ section.career h1 {
 section.career h1:after {
   content: "";
   height: 2px;
-  width: 152px;
+  width: 100px;
   position: absolute;
   bottom: 0;
   left: 50%;
   background-color: #FFFFFF;
   transform: translateX(-50%);
+}
+@media screen and (min-width: 992px) {
+  section.career h1:after {
+    width: 152px;
+  }
 }
 section.career a {
   width: 165px;
