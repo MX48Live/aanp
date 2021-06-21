@@ -586,6 +586,7 @@ section.what-we-offer .item .expand-group .title {
   color: #FFFFFF;
   line-height: 1.2em;
   overflow: hidden;
+  transition: 0.5s;
 }
 @media screen and (min-width: 768px) {
   section.what-we-offer .item .expand-group .title {
@@ -604,14 +605,14 @@ section.what-we-offer .item .expand-group .desc {
   color: #ffffff;
   padding-left: 20px;
   padding-right: 20px;
-  height: 200px;
+  height: 220px;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 9; 
   -webkit-box-orient: vertical;
   margin-bottom: 20px;
-  margin-top: 10px;
+  transition: 0.5s;
 
 }
 section.what-we-offer .item .expand-group .readmore span {
@@ -639,6 +640,9 @@ section.what-we-offer .item {
     max-height: 60px;
     transition: 0.5s;
   }
+  section.what-we-offer .item .title {
+    height: 60px !important;
+  }
   /* section.what-we-offer .item.expanded {
     max-height: 325px;
   }
@@ -651,11 +655,14 @@ section.what-we-offer .item {
 }
 @media screen and (min-width: 768px) {
   section.what-we-offer .item .expand-group {
-    transform: translatey(285px);
+    transform: translatey(295px);
     transition: 0.5s;
   }
   section.what-we-offer .item .expand-group .title span {
     transform: rotate(180deg);
+  }
+  section.what-we-offer .item.expanded .expand-group .title {
+    height: 80px;
   }
   
   section.what-we-offer .item.expanded .expand-group .title span {
@@ -665,11 +672,18 @@ section.what-we-offer .item {
     transform: rotate(0deg);
   }
 
+  section.what-we-offer .item:hover .expand-group .title {
+    height: 80px;
+  }
    section.what-we-offer .item.expanded .expand-group {
     transform: translatey(0px);
   }
   section.what-we-offer .item:hover .expand-group {
     transform: translatey(0px);
+  }
+
+  section.what-we-offer .item:hover .expand-group .desc {
+    height: 200px;
   }
 
 }
