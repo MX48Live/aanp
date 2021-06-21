@@ -50,7 +50,12 @@ header nav ul li.showSubMenu .material-icons {
   transform: rotate(180deg);
 }
 
-
+@media only screen and (max-width:767px) {
+  header nav ul li ul li {
+    max-width: 130px;
+    margin-left: 10px;
+  }
+}
 @media only screen and (max-width:991px) {
   header nav {
     max-height: 0;
@@ -100,7 +105,6 @@ header nav ul li.showSubMenu .material-icons {
     z-index: 9999;
   }
   header nav ul li ul li {
-    max-width: 130px;
     margin-left: 10px;
   }
   header nav ul li ul li a {
@@ -125,6 +129,9 @@ header nav ul li.showSubMenu .material-icons {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+  }
+  header nav ul li ul li {
+    width: 100%;
   }
 }
 
@@ -585,7 +592,7 @@ section.what-we-offer .item .expand-group.gray {
   background-color: #8495ac;
 }
 section.what-we-offer .item .expand-group .title {
-  height: 60px;
+  height: 70px;
   display: grid;
   text-align: center;
   align-items: center;
@@ -668,7 +675,7 @@ section.what-we-offer .item {
     transform: rotate(180deg);
   }
   section.what-we-offer .item.expanded .expand-group .title {
-    height: 80px;
+    height: 70px;
   }
   
   section.what-we-offer .item.expanded .expand-group .title span {
@@ -679,7 +686,7 @@ section.what-we-offer .item {
   }
 
   section.what-we-offer .item:hover .expand-group .title {
-    height: 80px;
+    height: 70px;
   }
    section.what-we-offer .item.expanded .expand-group {
     transform: translatey(0px);
@@ -689,7 +696,7 @@ section.what-we-offer .item {
   }
 
   section.what-we-offer .item:hover .expand-group .desc {
-    height: 200px;
+    height: 220px;
   }
 
 }
@@ -741,7 +748,7 @@ section.we-aap .slide-container {
   border-radius: 20px;
   box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
   background-color: #e6eaf6;
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
 }
 section.we-aap #slick-we-aap button.slick-arrow {
   box-shadow: none;
@@ -1160,7 +1167,7 @@ section.clients .slide-container {
 }
 section.clients #slick-clients {
   text-align: center;
-  padding: 15px;
+  padding: 25px 15px 15px 15px;
   border-radius: 20px;
   box-shadow: 3px 8px 18px 0 rgba(155, 155, 155, 0.34);
   background-color: #ffffff;

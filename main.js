@@ -11,6 +11,7 @@ $(document).ready(function () {
   })
 
   $('section.what-we-offer .item').on('click', function () {
+    $('section.what-we-offer .item').removeClass('expanded')
     $(this).toggleClass('expanded')
   })
 
