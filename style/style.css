@@ -41,6 +41,7 @@ header nav ul li ul {
 header nav ul li.showSubMenu ul {
   display: block;
   max-height: 1000px;
+  z-index: 9999;
 }
 header nav ul li .material-icons {
   transition: 0.3s;
@@ -95,7 +96,9 @@ header nav ul li.showSubMenu .material-icons {
   header nav ul li a {
     color: #153052;
   }
-  
+  header nav ul li ul {
+    z-index: 9999;
+  }
   header nav ul li ul li {
     max-width: 130px;
     margin-left: 10px;
@@ -785,7 +788,6 @@ section.we-aap .slick-app .item .top-section {
 }
 section.we-aap .slick-app .item .top-section .quote img {
   max-width: 100%;
-  border-radius: 50%;
 }
 section.we-aap .slick-app .item .top-section .text {
   text-align: center;
@@ -830,6 +832,7 @@ section.we-aap .slick-app .item .bottom-section {
 }
 section.we-aap .slick-app .item .bottom-section img {
   width: 100%;
+  border-radius: 50%;
 }
 section.we-aap .slick-app .item .bottom-section .name-position {
   display: grid;

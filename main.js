@@ -1,5 +1,6 @@
 $(document).ready(function () {
-
+  AOS.init();
+  
   $('header ul > li > a').parent().has('ul').on('click', function () {
     $(this).toggleClass('showSubMenu')
   })
@@ -115,7 +116,7 @@ $(document).ready(function () {
     nextArrow: nextArrow,
     prevArrow: prevArrow,
     appendDots: $('#slick-what-we-offer'),
-    dots: false,
+    dots: true,
     arrows: true,
     slidesToShow: 5,
     slidesToScroll: 1,

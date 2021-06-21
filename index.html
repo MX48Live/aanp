@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="/style/reset.css">
@@ -57,11 +58,11 @@
     </header>
 
     <section class="hero">
-      <div class="slide-container">
+      <div class="slide-container" >
         <div id="slick-hero">
-          <div class="slick-app">
+          <div class="slick-app" >
             <div class="item" style="background-image: url('/images/hero-1.png');">
-              <div class="container">
+              <div class="container" >
                 <h1>Reach your ultimate goal with the best financial partner</h1>
                 <div class="desc">Individuals or companies that require the best financial advice to maximize business potential are assured professional guidance and individualized service at AA&P</div>
                 <div class="button-group">
@@ -95,7 +96,7 @@
         
       </div>
       <div class="container slick">
-        <div class="slide-container">
+        <div class="slide-container" data-aos="fade-up"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
           <div id="slick-what-we-offer">
             <div class="slick-app">
               <div class="item" style="background-image: url('/images/offer-1.png');">
@@ -183,12 +184,12 @@
         <h1>We Are AA&P</h1>
         <div class="row">
           <div class="col-lg-5 col-xl-6">
-            <div class="article">
+            <div class="article"  data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
               Advisory Alliance & Partners (AA&P) is an independent financial advisory firm recognized by the Securities and Exchange Commission of Thailand. We pride ourselves on maintaining strong relationships with partner clients for long-term cooperation. We are a dynamic enterprise that boasts a team of experienced and accomplished advisors. Individuals or companies that require the best financial advice to maximize business potential are assured professional guidance and individualized service at AA&P.
             </div>
           </div>
           <div class="col-lg-7 col-xl-6">
-            <div class="slide-container">
+            <div class="slide-container" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500" data-aos-anchor-placement="center-bottom">
               <div id="slick-we-aap">
                 <div class="slick-app">
 
@@ -242,7 +243,7 @@
       <section class="insight">
         <div class="container">
           <h1>Our Insights</h1>
-          <div class="slide-container">
+          <div class="slide-container"  data-aos="fade-up"  data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
             <div id="slick-insight">
 
               <div class="item">
@@ -289,7 +290,7 @@
               
             </div>
           </div>
-          <div class="insight-form">
+          <div class="insight-form" data-aos="fade-right"  data-aos-duration="1000" >
             <div class="title">GET YOUR INSIGHTS</div>
             <form action="">
               <input type="text" placeholder="Email">
@@ -302,7 +303,7 @@
       <section class="clients">
         <div class="container">
           <h1>Hear from our clients</h1>
-          <div class="slide-container">
+          <div class="slide-container" data-aos="flip-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
             <div id="slick-clients">
               <div class="slick-app">
 
@@ -351,19 +352,21 @@
     
     <section class="the-future" style="background-image: url('/images/future-bg.png');">
       <div class="container">
-        <h1>Change the Future <br/>with Us!</h1>
+        <h1 data-aos="fade-down" data-aos-duration="1000">Change the Future <br/>with Us!</h1>
+        <div data-aos="fade-up"  data-aos-duration="1500" data-aos-delay="300">
         <a href="#" class="button">Partner with us</a>
         <br/>
         <a href="#">Meet the team</a>
+        </div>
       </div>
     </section>
 
     <section class="career">
       <div class="container">
-        <h1>Learn more about career opportunities at AA&P</h1>
-        <p>AA&P is always looking for remarkable and promising new team members. Talented people are at the heart of our strategy.</p>
-        <p>Will you be part of our success story?</p>
-        <a href="#">JOIN US</a>
+        <h1 data-aos-duration="1000" data-aos="fade-up">Learn more about career opportunities at AA&P</h1>
+        <p  data-aos-duration="1000"  data-aos-delay="300" data-aos="fade-up">AA&P is always looking for remarkable and promising new team members. Talented people are at the heart of our strategy.</p>
+        <p  data-aos-duration="1000"  data-aos-delay="500" data-aos="fade-up">Will you be part of our success story?</p>
+        <a href="#" data-aos-duration="1000"  data-aos-delay="700" data-aos="fade-up">JOIN US</a>
       </div>
     </section>
 
@@ -415,6 +418,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
