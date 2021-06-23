@@ -149,4 +149,19 @@ $(document).ready(function () {
     ]
   });
 
+  $('#slick-leader-mind .slick-app').slick({
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
+    appendDots: $('#slick-leader-mind'),
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1007,
+        settings: {
+          arrows: false,
+        }
+      },
+    ]
+  });
+
 })
