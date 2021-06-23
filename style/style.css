@@ -1509,7 +1509,7 @@ section.about  {
   position: relative;
 }
 section.about .stat {
-  transform: translateY(-53px);
+  transform: translateY(-80px);
 }
 @media screen and (min-width: 992px) {
   section.about .stat {
@@ -1807,6 +1807,9 @@ section.leader-mind .slide-container .item .bottom {
     grid-template-columns: auto auto;
     grid-gap: 20px;
     margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+
   }
   section.leader-mind .slide-container .item .name-position p {
     font-size: 22px;
@@ -1820,6 +1823,80 @@ section.leader-mind .slide-container .item .bottom {
     font-size: 40px;
   }
 }
+
+/* section.partner */
+section.partner {
+  padding: 35px 0 35px 0;
+}
+@media screen and (min-width: 992px) {
+  section.partner {
+    padding: 80px 0 80px 0;
+  }
+}
+section.partner h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #153052;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+section.partner h1:after {
+  content: "";
+  height: 2px;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #59c5c5;
+}
+@media screen and (min-width: 992px) {
+  section.partner  h1:after {
+    width: 152px;
+  }
+  section.partner  h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-bottom: 25px;
+    margin-bottom: 95px;
+  }
+}
+
+section.partner .item {
+  text-align: center;
+  padding: 10px;
+  text-align: center;
+}
+section.partner .item img {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 130px;
+  margin-bottom: 18px;
+}
+section.partner .item .desc {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  text-align: center;
+  color: #58595b;
+}
+@media screen and (min-width: 992px) {
+    section.partner .item .desc {
+      line-height: 1.88;
+    }
+}
+
 
 
 /* section.partner-with-us */

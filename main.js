@@ -164,4 +164,35 @@ $(document).ready(function () {
     ]
   });
 
+  $('#slick-partner').slick({
+    nextArrow: nextArrow,
+    prevArrow: prevArrow,
+    appendDots: $('#slick-partner'),
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    dots: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 1213,
+        settings: {
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          dots: false,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+        }
+      },
+    ]
+  });
+
 })
