@@ -1,5 +1,22 @@
 body {
   font-family: 'Roboto', sans-serif;
+  padding-top: 85px;
+}
+header  {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+@media only screen and (max-width:1198px) {
+  body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 70px;
+  }
+  header nav ul {
+    overflow-y: auto;
+    max-height: 88vh
+  }
 }
 
 header nav ul li a {
@@ -56,7 +73,7 @@ header nav ul li.showSubMenu .material-icons {
     margin-left: 10px;
   }
 }
-@media only screen and (max-width:991px) {
+@media only screen and (max-width:1198px) {
   header nav {
     max-height: 0;
     transition: 0.5s;
@@ -120,22 +137,8 @@ header nav ul li.showSubMenu .material-icons {
     text-align: center;
   }
 }
-@media only screen and (min-width:992px) and (max-width:1197px) {
-  header .logo {
-    text-align: center;
-  }
-  nav {
-    margin-top: 20px;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  header nav ul li ul li {
-    width: 100%;
-  }
-}
 
-@media screen and (min-width:1198px) {
+@media screen and (min-width:1199px) {
   header .logo {
     text-align: left;
   }
@@ -144,9 +147,6 @@ header nav ul li.showSubMenu .material-icons {
     grid-template-columns: auto auto;
     align-items: center;
   }
-}
-
-@media screen and (min-width:992px) {
   header .toggle-mobile {
     display: none;
   }
