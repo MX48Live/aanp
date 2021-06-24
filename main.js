@@ -218,4 +218,42 @@ $(document).ready(function () {
     ]
   });
 
+  $('section.our-people .tab-display-group .division').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: 'unslick',
+      }
+    ]
+  });
+
+
+  // Our People Group
+  $('section.our-people .tab-selector-group ul li').each(function () {
+    if ($(this).hasClass('active')) {
+      var currentActive = $(this).text();
+      $('section.our-people .current .text').text(currentActive);
+    }
+  })
+  $('section.our-people .tab-selector-group ul li').on('click', function () {
+    $('section.our-people .tab-selector-group ul li').removeClass('active')
+    $(this).addClass('active');
+    var activeTab = $(this).text();
+    var activeVal = $(this).data('active');
+    $('section.our-people .tab-display-group .division').removeClass('active');
+    $('section.our-people .tab-display-group .' + activeVal).addClass('active');
+    $('section.our-people .current  .text').text(activeTab);
+  })
+  $('section.our-people .current').on('click', function () {
+    $('section.our-people .tab-selector-group ul').toggleClass('show')
+  })
+  $('section.our-people .tab-selector-group ul').on('click', function () {
+    $('section.our-people .tab-selector-group ul').removeClass('show')
+  })
+
 })

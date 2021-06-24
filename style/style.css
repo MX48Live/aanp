@@ -8,7 +8,7 @@ header  {
   width: 100%;
   z-index: 9999;
 }
-@media only screen and (max-width:767px) {
+@media only screen and (max-width: 1198px) {
   header nav {
     height: 100vh;
   }
@@ -1513,8 +1513,11 @@ section.about  {
   background-color: #f5f5f5;
   position: relative;
 }
-section.about .stat {
+section.about .stat-container {
   transform: translateY(-80px);
+}
+section.about .stat {
+  
 }
 @media screen and (min-width: 992px) {
   section.about .stat {
@@ -1675,7 +1678,7 @@ section.about .about-text {
 @media screen and (min-width: 1199px) { 
   section.about .about-text {
     text-align: center;
-    margin-top: -100px;
+    margin-top: -70px;
   } 
 }
 section.about .about-text p {
@@ -2077,6 +2080,8 @@ section.promises .card-back {
   text-align: center;
   color: #ffffff;
   padding: 0 40px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 @media screen and (min-width: 1199px) {
   section.promises .card-back {
@@ -2088,6 +2093,7 @@ section.promises .card-back {
 section.promises .card-front {
   background-color: #bbb;
   color: black;
+  border-radius: 10px;
 }
 
 section.promises .card-front .circle {
@@ -2181,6 +2187,211 @@ section.promises .card-list .card-item:nth-child(even) .card-back {
     gap: 20px;
   }  
 }
+
+
+/* section.our-people */
+section.our-people h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #FFFFFF;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+section.our-people h1:after {
+  content: "";
+  height: 2px;
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #59c5c5;
+}
+@media screen and (min-width: 992px) {
+  section.our-people  h1:after {
+    width: 120px;
+  }
+  section.our-people  h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-bottom: 25px;
+    margin-bottom: 47px;
+  }
+}
+section.our-people {
+  background-color: #153052;
+  padding: 35px 0;
+}
+@media screen and (min-width: 992px) {
+  section.our-people {
+    background-color: #153052;
+    padding: 85px 0;
+  } 
+}
+section.our-people .tab-display-group .division {
+  display: none !important;
+
+}
+section.our-people .tab-display-group .division.active {
+  display: grid !important;
+}
+@media screen and (min-width: 768px) {
+  section.our-people .tab-display-group .division {
+      grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  section.our-people .current {
+    display: none;
+  } 
+}
+section.our-people .tab-display-group .division {
+  
+}
+section.our-people .item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+    section.our-people .item {
+      width: 300px;
+      margin-right: 20px;
+    }
+}
+section.our-people .item img {
+  max-width: 100%;
+  max-height: 385px;
+  border-radius: 10px;
+}
+
+section.our-people .item .name {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+section.our-people .item .position {
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #59c5c5;
+}
+section.our-people .item .name {
+  margin-top: 10px;
+}
+section.our-people .item .name,
+section.our-people .item .position {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+@media screen and (min-width: 992px) {
+  section.our-people .item .name {
+    font-size: 22px;
+    margin-top: 0;
+  }
+  section.our-people .item .position {
+    font-size: 16px;
+  }
+}
+
+section.our-people .current {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+section.our-people .current span.material-icons {
+  position: absolute;
+  right: 15px;
+  font-size: 30px;
+  line-height: 50px;
+}
+section.our-people .tab-selector-group {
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  section.our-people .current,
+  section.our-people .tab-selector-group ul li {
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #153052;
+    line-height: 50px;
+    border-radius: 10px;
+    background-color: #b9cbda;
+  }
+  section.our-people .tab-selector-group ul li.active {
+    color: #000000;
+  }
+  section.our-people .tab-selector-group ul {
+    background-color: #b9cbda;
+    border-radius: 10px;
+    margin-top: 5px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    display: none;
+  }
+  section.our-people .tab-selector-group ul.show {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  section.our-people .tab-selector-group  {
+    margin-bottom: 45px;
+  }
+  section.our-people .tab-selector-group ul {
+    border-bottom: solid 2px #8495ac;
+  }
+  section.our-people .tab-selector-group ul li {
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 20px;
+    border-bottom: 3px solid transparent;
+    font-weight: 500;
+  }
+  section.our-people .tab-selector-group ul li.active {
+    font-weight: 500;
+    color: #59c5c5;
+    border-bottom: 3px solid #59c5c5;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.our-people .tab-selector-group ul li {
+    font-size: 28px;
+  }
+}
+
+
 
 /* section.partner-with-us */
 section.partner-with-us {
