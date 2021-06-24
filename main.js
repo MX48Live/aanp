@@ -1,8 +1,7 @@
 $(document).ready(function () {
-  AOS.init();
   
   $('header ul > li > a').parent().has('ul').on('click', function () {
-    $(this).toggleClass('showSubMenu')
+    $(this).toggleClass('showSubMenu')  
   })
 
   $('header .logo .toggle-mobile').on('click', function () {
@@ -11,8 +10,18 @@ $(document).ready(function () {
   })
 
   $('section.what-we-offer .item').on('click', function () {
-    $('section.what-we-offer .item').removeClass('expanded')
+    if (!$(this).hasClass('expanded')) {
+      $('section.what-we-offer .item').removeClass('expanded')
+    }
     $(this).toggleClass('expanded')
+  })
+   
+  $('section.promises .card-item').on('click', function () {
+
+    if (!$(this).hasClass('active')) {
+      $('section.promises .card-item').removeClass('active')  
+    }
+    $(this).toggleClass('active')
   })
 
   $('#slick-clients .slick-app .item .video').on('click', function () {
@@ -192,6 +201,20 @@ $(document).ready(function () {
           dots: true,
         }
       },
+    ]
+  });
+
+  $('section.promises .card-list').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: false,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: 'unslick',
+      }
     ]
   });
 

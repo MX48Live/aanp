@@ -8,6 +8,11 @@ header  {
   width: 100%;
   z-index: 9999;
 }
+@media only screen and (max-width:767px) {
+  header nav {
+    height: 100vh;
+  }
+}
 @media only screen and (max-width:1198px) {
   body {
     font-family: 'Roboto', sans-serif;
@@ -1063,13 +1068,13 @@ section.insight .slick-arrow {
 }
 @media screen and (max-width: 991px) {
   section.insight .item {
-    max-width: 40vw;
+    max-width: 300px;
   }  
 }
 
 @media screen and (max-width: 767px) {
   section.insight .item {
-    max-width: 80vw;
+    max-width: 300px;
   }  
 }
 
@@ -1989,6 +1994,193 @@ section.vision-mission li {
 }
 
 
+section.promises  {
+  padding: 35px 0;
+  background-size: auto 100%;
+}
+section.promises h1 {
+  font-size: 22px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.79px;
+  color: #153052;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+section.promises h1:after {
+  content: "";
+  height: 2px;
+  width: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #59c5c5;
+}
+@media screen and (min-width: 992px) {
+  section.promises  h1:after {
+    width: 120px;
+  }
+  section.promises  h1 {
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-align: left;
+    padding-bottom: 25px;
+    margin-bottom: 95px;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.promises  {
+    padding: 80px 0;
+  } 
+}
+section.promises .slick-list {
+  width: 100%;
+}
+section.promises .card-list .card-item .card-body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+section.promises .card-list .card-item:hover .card-body,
+section.promises .card-list .card-item.active .card-body {
+  transform: rotateY(180deg);
+}
+
+section.promises .card-front, section.promises .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+section.promises .card-back {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 40px;
+}
+@media screen and (min-width: 1199px) {
+  section.promises .card-back {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+section.promises .card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+section.promises .card-front .circle {
+  height: 120px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 992px) {
+  section.promises .card-front .circle {
+    height: 170px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+section.promises .card-front .text  {
+  font-size: 20px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+
+}
+@media screen and (min-width: 992px) {
+  section.promises .card-front .text  {
+    font-size: 22px;
+  }
+}
+
+section.promises .card-back {
+  transform: rotateY(180deg);
+}
+
+
+section.promises .card-list .card-item {
+  width: 300px;
+  height: 280px;
+  perspective: 1000px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+section.promises .card-list .card-item:nth-child(odd) .card-front,
+section.promises .card-list .card-item:nth-child(odd) .card-back {
+  background-color: #153052;
+}
+section.promises .card-list .card-item:nth-child(even) .card-front,
+section.promises .card-list .card-item:nth-child(even) .card-back {
+  background-color: #8495ac;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.promises .card-list .card-item:nth-child(3) .card-front,
+  section.promises .card-list .card-item:nth-child(3) .card-back {
+    background-color: #8495ac;
+  }
+  section.promises .card-list .card-item:nth-child(4) .card-front,
+  section.promises .card-list .card-item:nth-child(4) .card-back {
+    background-color: #153052;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section.promises .card-list .card-item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section.promises .card-list .card-item {
+    height: 385px;
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section.promises .card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }  
+}
+@media screen and (min-width: 992px) {
+  section.promises .card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }  
+}
 
 /* section.partner-with-us */
 section.partner-with-us {
