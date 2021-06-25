@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  AOS.init();
+  $('header li.submenu a').on('click', function (e) {
+    e.preventDefault();
+  })
   $('header ul > li > a').parent().has('ul').on('click', function () {
     $(this).toggleClass('showSubMenu')  
   })
@@ -29,8 +31,8 @@ $(document).ready(function () {
     $(this).html('<iframe src="https://www.youtube.com/embed/'+youtubeID+'?rel=0&autoplay=1" width="320" height="240" frameborder="0" allowfullscreen="true">').css('background', 'none');
   })
 
-  var nextArrow = '<button type="button" class="slick-next"><img src="/images/arrow-right.svg" /></button>';
-  var prevArrow = '<button type="button" class="slick-prev"><img src="/images/arrow-left.svg" /></button>';
+  var nextArrow = '<button type="button" class="slick-next"><img src="./images/arrow-right.svg" /></button>';
+  var prevArrow = '<button type="button" class="slick-prev"><img src="./images/arrow-left.svg" /></button>';
 
   $('#slick-hero .slick-app').slick({
     nextArrow: nextArrow,
@@ -152,7 +154,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 769,
+        breakpoint: 768,
         settings: "unslick"
       },
     ]
@@ -207,26 +209,25 @@ $(document).ready(function () {
   $('section.promises .card-list').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    mobileFirst: true,
     arrows: false,
     variableWidth: true,
+    mobileFirst: true,
     responsive: [
       {
-        breakpoint: 768,
-        settings: 'unslick',
-      }
+        breakpoint: 767,
+        settings: "unslick"
+      },
     ]
   });
 
   $('section.our-people .tab-display-group .division').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
     mobileFirst: true,
     arrows: false,
     variableWidth: true,
+    mobileFirst: true,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 767,
         settings: 'unslick',
       }
     ]
@@ -255,5 +256,7 @@ $(document).ready(function () {
   $('section.our-people .tab-selector-group ul').on('click', function () {
     $('section.our-people .tab-selector-group ul').removeClass('show')
   })
+
+  AOS.init();
 
 })

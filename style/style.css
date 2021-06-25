@@ -6,9 +6,19 @@ body {
 header  {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 1;
 }
+
+header [data-aos] {
+  pointer-events: none;
+}
+header [data-aos].aos-animate {
+  pointer-events: auto;
+}
+
 @media only screen and (max-width: 1198px) {
   header nav {
     height: 100vh;
@@ -29,6 +39,7 @@ header nav ul li a {
   color: #FFFFFF;
   line-height: 40px;
   letter-spacing: 0.7px;
+  position: relative;
 }
 header nav ul li a:hover {
   color: #37bfd6;
@@ -37,6 +48,17 @@ header nav ul li .material-icons {
   vertical-align: middle;
   margin-top: -3px;
   color: #37bfd6;
+}
+
+li.submenu > a:after {
+  content: "";
+  padding-right: 20px;
+  margin-left: 5px;
+  width: 10px;
+  background-position: center center;
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-image: url('/images/submenu.svg');
 }
 
 .language.en .en,
@@ -54,7 +76,7 @@ header nav ul li.button a {
   transition: 0.5s;
 }
 header nav ul li.button a:hover {
-
+  background: linear-gradient(90deg, #0376bd 0%, #0376bd 100%);
 }
 header nav ul li ul {
   overflow: hidden;
@@ -65,12 +87,6 @@ header nav ul li.showSubMenu ul {
   display: block;
   max-height: 1000px;
   z-index: 9999;
-}
-header nav ul li .material-icons {
-  transition: 0.3s;
-}
-header nav ul li.showSubMenu .material-icons {
-  transform: rotate(180deg);
 }
 
 @media only screen and (max-width:767px) {
@@ -101,6 +117,12 @@ header nav ul li.showSubMenu .material-icons {
     height: 30px;
     width: 30px;
     cursor: pointer;
+    background-image: url('/images/ham.svg');
+    background-size: 100% auto ;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+
   }
   header .toggle-mobile span {
     font-size: 30px;
@@ -499,11 +521,15 @@ section.hero a.button {
   margin: 5px;
 }
 section.hero a.button:hover {
-  background-color: #0376bd;
+  background-color: #476580;
 }
 section.hero a.button.blue {
   border: solid 1px #ffffff;
   background-color: #153052;
+}
+section.hero a.button.blue:hover {
+  color: #153052;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 992px) {
   section.hero a.button {
@@ -634,10 +660,18 @@ section.what-we-offer .item .expand-group .desc {
   transition: 0.5s;
 
 }
-section.what-we-offer .item .expand-group .readmore span {
-  vertical-align: middle;
-  font-size: 20px;
-  margin-top: -4px;
+section.what-we-offer .item .expand-group .readmore:after {
+  content: "";
+  width: 20px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+  background-image: url('/images/readmore.svg');
 }
 section.what-we-offer .item .expand-group .readmore a {
   color: #FFFFFF;
@@ -649,6 +683,7 @@ section.what-we-offer .item .expand-group .readmore a {
 }
 section.what-we-offer .item .expand-group .readmore {
   text-align: center;
+  position: relative;
 }
 section.what-we-offer .item {
   overflow: hidden;
@@ -1105,7 +1140,7 @@ section.insight .insight-form button {
   margin-left: auto;
 }
 section.insight .insight-form button:hover {
-  background-color: #0376bd;
+  background-color: #476580;
 }
 section.insight .insight-form form {
   display: block;
@@ -1226,8 +1261,8 @@ section.clients #slick-clients .slick-app {
 }
 #slick-clients .slick-app .item .video .play-btn {
   color: #FFFFFF;
-  width: 49px;
-  height: 49px;
+  width: 70px;
+  height: 70px;
   opacity: 0.7;
   background-blend-mode: multiply;
   background-image: linear-gradient(to bottom, #8495ac, #8495ac);
@@ -1237,19 +1272,18 @@ section.clients #slick-clients .slick-app {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 998;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
-#slick-clients .slick-app .item .video .play-btn span {
-  font-size: 30px;
-  line-height: 49px;
+#slick-clients .slick-app .item .video .play-btn img {
+  width: 30px;
+  margin-left: 6px;
 }
 @media screen and (min-width: 1200px) {
   #slick-clients .slick-app .item .video .play-btn {
       width: 79px;
       height: 79px;
-  }
-  #slick-clients .slick-app .item .video .play-btn span {
-    font-size: 50px;
-    line-height: 79px;
   }
 }
 
@@ -1260,6 +1294,7 @@ section.clients #slick-clients .slick-app {
   left: 0;
   opacity: 1;
   border-radius: 10px;
+  z-index: 100;
 }
 
 @media screen and (max-width: 991px) {
@@ -1385,10 +1420,13 @@ section.the-future a {
   margin: 15px;
 }
 section.the-future a:hover {
-  background-color: #0376bd;
+  background-color: #476580;
 }
 section.the-future a.button {
   background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%);
+}
+section.the-future a.button:hover {
+  background: linear-gradient(90deg, #0376bd 0%, #0376bd 100%);
 }
 
 @media screen and (min-width: 992px) {
@@ -1450,10 +1488,11 @@ section.career a {
   padding: 12px 53px;
   border-radius: 20px;
   background-color: #8495ac;
-  transition: 0.5s;
+  transition: 0.5s !important;
 }
 section.career a:hover {
-  background-color: #0376bd;
+  transition: 0.5s;
+  background-color: #476580;
 }
 
 @media screen and (min-width: 768px) {
@@ -1700,11 +1739,13 @@ section.about .about-video {
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
+  z-index: 100;
 }
 @media screen and (max-width: 991px) { 
   section.about .about-video iframe {
     width: 100%;
     height: 300px;
+    z-index: 100;
   }
 }
 
@@ -2161,14 +2202,25 @@ section.promises .card-list .card-item:nth-child(even) .card-back {
     background-color: #153052;
   }
 }
-
+@media screen and (max-width: 767px) {
+  section.promises h1 {
+    margin-left: 15px;
+  }
+  section.promises .container.responsive {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 @media screen and (min-width: 768px) {
   section.promises .card-list .card-item {
     width: 100%;
+    height: 280px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 992px) {
   section.promises .card-list .card-item {
+    width: 100%;
     height: 385px;
     margin-bottom: 0px;
   }
@@ -2234,8 +2286,10 @@ section.our-people {
     padding: 85px 0;
   } 
 }
+
 section.our-people .tab-display-group .division {
   display: none !important;
+  color: #FFFFFF;
 
 }
 section.our-people .tab-display-group .division.active {
@@ -2257,7 +2311,12 @@ section.our-people .item {
   text-align: center;
   margin-bottom: 30px;
 }
+
 @media screen and (max-width: 767px) {
+    section.our-people .container.responsive {
+      width: 100%;
+      max-width: 100%;
+    }
     section.our-people .item {
       width: 300px;
       margin-right: 20px;
@@ -2315,11 +2374,19 @@ section.our-people .current {
   margin-bottom: 20px;
   cursor: pointer;
 }
-section.our-people .current span.material-icons {
+section.our-people .current:after {
   position: absolute;
   right: 15px;
-  font-size: 30px;
-  line-height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-size: 100%;
+  background-position: center center;
+  background-image: url('/images/select-division.svg');
+  background-repeat: no-repeat;
 }
 section.our-people .tab-selector-group {
   position: relative;
@@ -2440,7 +2507,7 @@ section.partner-with-us p:after {
 
 
 section.partner-with-us a {
-    background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%);
+  background: linear-gradient(90deg, #0376bd 0%, #37bfd6 100%);
   line-height: 40px;
   white-space: nowrap;
   display: inline-block;
@@ -2449,4 +2516,7 @@ section.partner-with-us a {
   color: #FFFFFF;
   transition: 0.5s;
   text-transform: uppercase;
+}
+section.partner-with-us a:hover  {
+  background: linear-gradient(90deg, #0376bd 0%, #0376bd 100%);
 }
