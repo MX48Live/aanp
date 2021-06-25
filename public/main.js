@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  
+  AOS.init();
   $('header ul > li > a').parent().has('ul').on('click', function () {
     $(this).toggleClass('showSubMenu')  
   })
