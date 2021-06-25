@@ -11,7 +11,9 @@ header  {
   width: 100%;
   z-index: 1;
 }
+.container {
 
+}
 header [data-aos] {
   pointer-events: none;
 }
@@ -940,6 +942,12 @@ section.insight #slick-insight {
   text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+  section.insight .container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 section.insight #slick-insight .slick-dots {
   margin-top: 25px;

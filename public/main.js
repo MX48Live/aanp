@@ -68,17 +68,7 @@ $(document).ready(function () {
         }
       },
       {
-        breakpoint: 1007,
-        settings: {
-          arrows: false,
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          dots: true,
-          variableWidth: true,
-        }
-      },
-      {
-        breakpoint: 769,
+        breakpoint: 768,
         settings: {
           arrows: false,
           slidesToShow: 1,
